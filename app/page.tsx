@@ -1,66 +1,41 @@
+import Navbar from "../components/Navbar";
+import Logo from "../components/Logo";
+import Avatar from "../components/Avatar";
 import Image from "next/image";
-import styles from "./page.module.css";
+import LeftSection from "../components/LeftSection";
+import RightSection from "@/components/RightSection";
+import Cloudbg from "../components/Cloudbg";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.tsx file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main className="min-h-dvh w-screen flex justify-center items-start overflow-x-hidden">
+      <div className="relative bg-[url('/layer.png')] bg-repeat bg-top bg-size-[395px_395px] w-full max-w-[1440px] min-h-[2414px] md:bg-size-[512px_512px] shrink-0 pb-10 md:pb-16">
+        <Navbar />
+        <Cloudbg />
+        <div className="w-full flex justify-center mt-2 md:mt-6">
+          <div className="relative flex flex-col items-center">
+            <div className="z-10 -translate-x-[6px] md:-translate-x-[10px]">
+              <Logo />
+            </div>
+            <div className="-mt-27 md:-mt-57 z-20 ml-0 md:ml-0">
+              <Avatar />
+            </div>
+            <div className="z-30 -mt-[100px] w-[525px] h-[183px] shrink-0 rounded-[525px] bg-[#15161A] blur-[39.7px] md:-mt-[250px] md:w-[1051px] md:h-[357px] md:rounded-[1051px] md:blur-[79.9px]" />
+            <div className="hidden md:block relative z-40 -mt-[150px] md:-mt-[100px]">
+              <Image src="/text_2.png" alt="Wisdom From a Sensei" width={417} height={41} className="ml-[10px] md:ml-[18px]" />
+              <Image src="/text_1.png" alt="Guidance From the Stars," width={333} height={28} className="absolute left-[42px] -top-[32px] md:-left-[80px] md:-top-[32px] " />
+            </div>
+          </div>
         </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+        <div className="w-full max-w-[1051px] mx-auto px-4 -mt-[50px] md:mt-50">
+          <div className="flex flex-col items-center gap-10 md:flex-row md:items-start md:justify-between">
+            <LeftSection />
+            <RightSection />
+          </div>
         </div>
-      </main>
-    </div>
+      </div>
+    </main>
   );
 }
+
+
