@@ -187,7 +187,7 @@ export default function Cloudbg() {
 
     <div className="hidden md:block pointer-events-none select-none absolute md:top-75 md:-right-18 z-20 w-[388.597px] h-[204.046px] shrink-0">
       <Image
-        src="/cloud_7.png"
+        src="/Cloud_7.png"
         alt="Cloud graphic"
         width={388}
         height={204}
@@ -368,7 +368,7 @@ export default function Cloudbg() {
     </div>
     <div className="block md:hidden pointer-events-none select-none absolute top-360 -left-10 z-20 w-[190px] h-[74.622px] shrink-0">
       <Image
-        src="/Cloud_5.png"
+        src="/cloud_5.png"
         alt="Cloud graphic"
         width={190}
         height={74}
@@ -379,7 +379,7 @@ export default function Cloudbg() {
     </div>
     <div className="block md:hidden pointer-events-none select-none absolute top-345 -right-25 z-20 w-[240px] h-[94.259px] shrink-0">
       <Image
-        src="/Cloud_5.png"
+        src="/cloud_5.png"
         alt="Cloud graphic"
         width={240}
         height={94}
